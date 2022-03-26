@@ -1,3 +1,6 @@
+use copilottest;
 fn main() {
-    println!("Hello, world!");
+	for i in 0..10 {
+		println!("index: {} fib: {}", i, copilottest::fibonacci(i));
+	}
 }
