@@ -1,5 +1,13 @@
 // find a number in the fibbonacci sequence
-fn fibonacci(n: u32) -> u32 {
+/// # Examples
+/// ```
+/// use copilottest::fibonacci;
+/// assert_eq!(fibonacci(0), 0);
+/// assert_eq!(fibonacci(1), 1);
+/// assert_eq!(fibonacci(2), 1);
+/// assert_eq!(fibonacci(3), 2);
+/// ```
+pub fn fibonacci(n: u32) -> u32 {
 	match n {
 		0 => 0,
 		1 => 1,
@@ -7,8 +15,9 @@ fn fibonacci(n: u32) -> u32 {
 	}
 }
 
-#[cfg(tests)]
+#[cfg(test)]
 mod tests {
+	use super::*;
 	#[test]
 	fn test_fibbonacci() {
 		assert_eq!(fibonacci(0), 0);
